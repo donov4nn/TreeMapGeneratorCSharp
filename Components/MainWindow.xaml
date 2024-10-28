@@ -1,0 +1,16 @@
+﻿<Window x:Class="Components.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:treeMap="clr-namespace:Components.TreeMap.Components.TreeMap"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <treeMap:TreeMapControl
+            ItemsSource="{Binding Items}"
+            SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
+            ItemClickCommand="{Binding ItemClickCommand}"
+            PopupDelay="500" />
+    </Grid>
+</Window>
